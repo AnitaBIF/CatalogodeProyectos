@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Proyectos</title>
+    <style>
+        /* Estilos CSS aquí */
+        body {
+            font-family: 'Lucida Bright', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #ffffff; /* Fondo blanco */
+        }
+
+        header {
+            background: linear-gradient(to bottom, #05113a,  #6284f3); /* Degradado azul al blanco */
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        h1 {
+            font-family: 'Lucida Bright', sans-serif; /* Letra más linda para el título */
+            font-size: 36px;
+            margin-top: 0;
+        }
+
+        .login-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .login-form {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 40px;
+            margin-top: 30px;
+            background-color: #ffffff; /* Fondo blanco */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            background-color: #f7f7f7; /* Color gris muy claro */
+        }
+
+        .login-form input[type="submit"] {
+            background-color: #021655; /* Botón a juego */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .register-reminder {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        footer {
+            background: linear-gradient(to bottom, #6284f3, #05113a);
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="imag/logo.png" alt="Logo de la Facultad" style="width: 250px; height: auto;">
+            <h1>CATÁLOGO DE PROYECTOS</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <p>Aquí encontrarás los proyectos finales de las distintas carreras de Ingeniería</p>
+        <div class="login-container">
+            <h2>Ingrese a su cuenta:</h2>
+            <form class="login-form" action="busqueda.html" method="POST">
+                <label>Usuario:</label>
+                <input type="text">
+                <label>Contraseña:</label>
+                <input type="password">
+                <input type="submit" value="Ingresar">
+            </form>
+            <p class="register-reminder">Regístrese con su usuario y contraseña de la autogestión.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Facultad de Ingeniería. UNSTA</p>
+    </footer>
+</body>
+
+</html>

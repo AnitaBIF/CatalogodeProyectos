@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Proyectos</title>
+    <style>
+        /* Estilos CSS aquí */
+        body {
+            font-family: 'Lucida Bright', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #ffffff; /* Fondo blanco */
+        }
+
+        header {
+            background: linear-gradient(to bottom, #05113a,  #6284f3); /* Degradado azul al blanco */
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .search-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .search-form {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 30px;
+            margin-bottom: 20px;
+            background-color: #ffffff; /* Fondo blanco */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+
+        .search-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .search-form select,
+        .search-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            background-color: #f7f7f7; /* Color gris muy claro */
+        }
+
+        .search-form input[type="submit"] {
+            background-color: #05113a; /* Botón a juego */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #05113a; 
+            color: #fff;
+        }
+
+        footer {
+            background: linear-gradient(to bottom, #6284f3, #05113a);
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>CATÁLOGO DE PROYECTOS</h1>
+            <img class="logo" src="imag/logo.png" alt="Logo de la Facultad" style="width: 250px; height: auto;">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="search-container">
+            <form class="search-form" action="/buscar" method="GET">
+                <label for="filtro">Filtro:</label>
+                <select name="filtro" id="filtro">
+                    <option value="nombre">Nombre del Proyecto</option>
+                    <option value="autor">Autor</option>
+                    <option value="año">Año</option>
+                    <option value="tema">Tema</option>
+                    <option value="ingenieria">Ingeniería</option>
+                </select>
+                <label for="termino">Ingrese el término de búsqueda:</label>
+                <input type="text" name="termino" id="termino" placeholder="Escriba aquí...">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Proyecto</th>
+                    <th>Autor</th>
+                    <th>Año</th>
+                    <th>Ingeniería</th>
+                    <th>Tema</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se cargarán dinámicamente los datos de los proyectos -->
+                <tr>
+                    <td><a href="proyecto.html">Nombre del Proyecto 1</a></td>
+                    <td>Autor 1</td>
+                    <td>2023</td>
+                    <td>Ingeniería 1</td>
+                    <td>Tema 1</td>
+                </tr>
+                <tr>
+                    <td><a href="proyecto.html">Nombre del Proyecto 2</a></td>
+                    <td>Autor 2</td>
+                    <td>2022</td>
+                    <td>Ingeniería 2</td>
+                    <td>Tema 2</td>
+                </tr>
+                <!-- Puedes agregar más filas según la cantidad de proyectos -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>© 2024 Facultad de Ingeniería. UNSTA</p>
+    </footer>
+
+</body>
+
+</html>

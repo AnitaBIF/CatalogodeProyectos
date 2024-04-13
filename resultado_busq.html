@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Proyecto</th>
+                    <th>Autor</th>
+                    <th>Año</th>
+                    <th>Ingeniería</th>
+                    <th>Tema</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for proyecto in proyectos %}
+                    <tr>
+                        <td><a href="proyecto.html">{{ proyecto['Nombre del Proyecto'] }}</a></td>
+                        <td>{{ proyecto['Autor'] }}</td>
+                        <td>{{ proyecto['Año'] }}</td>
+                        <td>{{ proyecto['Ingeniería'] }}</td>
+                        <td>{{ proyecto['Tema'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
